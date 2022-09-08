@@ -100,7 +100,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line28">line 28</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line39">line 39</a>
     </li></ul></dd>
     
 
@@ -150,7 +150,75 @@
 
         
             
-<h4 class="name" id="todoList"><span class="type-signature"></span>todoList<span class="type-signature"> :Map.&lt;string, <a href="Todo.html">Todo</a>></span></h4>
+<h4 class="name" id="endId"><span class="type-signature"></span>endId<span class="type-signature"> :Number</span></h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line49">line 49</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="todoList"><span class="type-signature"></span>todoList<span class="type-signature"> :Map.&lt;Number, <a href="Todo.html">Todo</a>></span></h4>
 
 
 
@@ -165,7 +233,7 @@
     <ul>
         <li>
             
-<span class="param-type">Map.&lt;string, <a href="Todo.html">Todo</a>></span>
+<span class="param-type">Map.&lt;Number, <a href="Todo.html">Todo</a>></span>
 
 
         </li>
@@ -211,7 +279,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line34">line 34</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line47">line 47</a>
     </li></ul></dd>
     
 
@@ -239,7 +307,7 @@
     
 
     
-    <h4 class="name" id="addTodo"><span class="type-signature"></span>addTodo<span class="signature">(id, todoData)</span><span class="type-signature"> &rarr; {void}</span></h4>
+    <h4 class="name" id="addTodo"><span class="type-signature"></span>addTodo<span class="signature">(todoData)</span><span class="type-signature"> &rarr; {void}</span></h4>
     
 
     
@@ -284,7 +352,92 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>todoData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>complete,content,category,tags 를 전달합니다. require값입니다.</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>complete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>할 일의 완료 여부를 전달합니다.defaul값은 false 입니다.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
             
 
             <td class="type">
@@ -297,33 +450,105 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last"><p>사용될 id</p></td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>해야할 일의 내용을 나타냅니다.require 값입니다.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>todoData</code></td>
+                <td class="name"><code>category</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#TodoData">TodoData</a></span>
+<span class="param-type">string</span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last"><p>사용될 todo데이터</p></td>
+            
+                <td class="default">
+                
+                    미분류
+                
+                </td>
+            
+
+            <td class="description last"><p>어떤 카테고리에 속하는지를 나타냅니다.default값은 &quot;미분류&quot; 입니다</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>optional - 해야할일의 태그들을 나타냅니다.optional 값 입니다.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -371,7 +596,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line43">line 43</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line63">line 63</a>
     </li></ul></dd>
     
 
@@ -485,7 +710,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line83">line 83</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line130">line 130</a>
     </li></ul></dd>
     
 
@@ -572,7 +797,7 @@ ID로 특정 할 일을 제거합니다.</p>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Number</span>
 
 
             
@@ -630,7 +855,7 @@ ID로 특정 할 일을 제거합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line91">line 91</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line140">line 140</a>
     </li></ul></dd>
     
 
@@ -735,7 +960,7 @@ ID로 특정 할 일의 모든 태그를 제거합니다.</p>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Number</span>
 
 
             
@@ -793,7 +1018,7 @@ ID로 특정 할 일의 모든 태그를 제거합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line108">line 108</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line166">line 166</a>
     </li></ul></dd>
     
 
@@ -847,7 +1072,7 @@ ID로 특정 할 일의 모든 태그를 제거합니다.</p>
     
 
     
-    <h4 class="name" id="deleteTodoTagById"><span class="type-signature"></span>deleteTodoTagById<span class="signature">(id, targetTags)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="deleteTodoTagById"><span class="type-signature"></span>deleteTodoTagById<span class="signature">(id, targetTags)</span><span class="type-signature"> &rarr; {void}</span></h4>
     
 
     
@@ -898,7 +1123,7 @@ ID로 특정 할 일의 특정 태그를 제거합니다.</p>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Number</span>
 
 
             
@@ -979,7 +1204,7 @@ ID로 특정 할 일의 특정 태그를 제거합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line100">line 100</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line151">line 151</a>
     </li></ul></dd>
     
 
@@ -1007,11 +1232,19 @@ ID로 특정 할 일의 특정 태그를 제거합니다.</p>
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    <p>{void</p>
-</div>
 
 
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -1078,7 +1311,7 @@ ID로 특정 할 일의 특정 태그를 제거합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line49">line 49</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line73">line 73</a>
     </li></ul></dd>
     
 
@@ -1187,7 +1420,7 @@ ID로 특정 할일 리스트를 조회 합니다.</p>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Number</span>
 
 
             
@@ -1245,7 +1478,7 @@ ID로 특정 할일 리스트를 조회 합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line57">line 57</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line83">line 83</a>
     </li></ul></dd>
     
 
@@ -1354,7 +1587,7 @@ ID로 특정 할 일을 수정합니다.</p>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Number</span>
 
 
             
@@ -1364,7 +1597,7 @@ ID로 특정 할 일을 수정합니다.</p>
 
             
 
-            <td class="description last"><p>수정할 todo의 id</p></td>
+            <td class="description last"><p>id를 전달합니다.require값입니다.</p></td>
         </tr>
 
     
@@ -1377,7 +1610,7 @@ ID로 특정 할 일을 수정합니다.</p>
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#TodoData">TodoData</a></span>
+<span class="param-type">object</span>
 
 
             
@@ -1387,7 +1620,187 @@ ID로 특정 할 일을 수정합니다.</p>
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>complete,content,category,tags 를 전달합니다. require값입니다.</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>complete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p>할 일의 완료 여부를 전달합니다.defaul값은 false 입니다.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>content</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>해야할 일의 내용을 나타냅니다.require 값입니다.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>category</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    미분류
+                
+                </td>
+            
+
+            <td class="description last"><p>어떤 카테고리에 속하는지를 나타냅니다.default값은 &quot;미분류&quot; 입니다</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>optional - 해야할일의 태그들을 나타냅니다.optional 값 입니다.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -1435,7 +1848,7 @@ ID로 특정 할 일을 수정합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line66">line 66</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line101">line 101</a>
     </li></ul></dd>
     
 
@@ -1540,7 +1953,7 @@ ID로 특정 할일의 특정 태그를 수정합니다.</p>
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Number</span>
 
 
             
@@ -1644,7 +2057,7 @@ ID로 특정 할일의 특정 태그를 수정합니다.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line76">line 76</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line114">line 114</a>
     </li></ul></dd>
     
 
@@ -1714,7 +2127,7 @@ ID로 특정 할일의 특정 태그를 수정합니다.</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Wed Sep 07 2022 20:32:04 GMT+0900 (대한민국 표준시)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Thu Sep 08 2022 17:58:59 GMT+0900 (대한민국 표준시)
 </footer>
 
 <script> prettyPrint(); </script>
